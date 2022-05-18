@@ -1,0 +1,53 @@
+:root {
+  /* --bgColor: #f5f8fa; */
+  --bgColor2: #f5f0f0;
+  --color1: #aab8c2;
+  --color2: #14171a;
+  --color3: #657786;
+  --shadow: 1px 15px 28px rgb(0 0 0 / 10%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: "nunito", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  background-color: var(--bgColor2);
+}
+.btn {
+  padding: 0.8rem;
+  color: #fff;
+  border: none;
+}
+
+.sub--heading {
+  font-size: 1.6rem;
+  letter-spacing: 2.4px;
+}
+
+.svgs {
+  fill: var(--color1);
+  width: 55px;
+  height: 55px;
+  background-color: #14171a;
+  border-radius: 50%;
+  padding: 5px;
+}
+.svg-small {
+  fill: #14171a;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.form__svg {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  transform: translateY(-50%);
+}
