@@ -2,173 +2,108 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Staff page login</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <!-- <link rel="stylesheet" href="./css/font-awesome.min.css" /> -->
-    <script
-      src="https://kit.fontawesome.com/b57f0e1974.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/general.css" />
+
+    <title>Sprite | Login Portal</title>
   </head>
   <body>
-    <nav id="">
-      <h4><i>Blue</i>HUB</h4>
-    </nav>
+    <div class="overlay"></div>
 
-    <!-- Greeting Modal -->
-    <div id="main-page--modal">
-      <div id="main-page-modal-content">
-        <div id="main-page-modal--header">
-          <h3>Welcome to Blue Hub Enterprise</h3>
-          <p>Enjoy Your Time and Activities</p>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__brand">
+          <h1>sprite</h1>
         </div>
-        <span id="info-holder">
-          <span id="time-info">23:44</span>
-          <span id="date-info">| </span>
-        </span>
-        <div id="login-type-content">
-          <div id="login-btn-holder">
-            <span id="login-btn"
-              >Login Here <i class="fa fa-arrow-down login-icon"></i
-            ></span>
-          </div>
-          <div id="login-holder">
-            <p>
-              Please click the button below to log in, Visitor login Or Staff
-              login
-            </p>
-            <button id="visitor-btn" class="login-btn">
-              Visitor Click here
-            </button>
-            <button id="staff-btn" class="login-btn">Staff Click here</button>
-          </div>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="update__section">
+        <div class="date__section">
+          <svg class="svg-small">
+            <use xlink:href="svg/material-icon-sprite.svg#icon-date_range"></use>
+          </svg>
+          <h3 class="update__date"></h3>
         </div>
+        <div class="time__section">
+          <svg class="svg-small">
+            <use xlink:href="svg/material-icon-sprite.svg#icon-access_time"></use>
+          </svg>
+          <h3 class="update__time"></h3>
+        </div>
+      </section>
+      <section class="welcome__section">
+        <div class="welcome__box">
+          <h4 class="welcome__text">Welcome to Sprite</h4>
+          <p class="welcome__name">s</p>
+          <!-- <p class="welcome__name">dada</p> -->
+        </div>
+        <svg class="svgs welcome__svg">
+          <use xlink:href="svg/material-icon-sprite.svg#icon-done"></use>
+        </svg>
+      </section>
+      <section class="login__section">
+        <h4 class="sub--heading login__text">Login Respectively</h4>
+        <div class="login__container">
+          <button class="btn visitor__login--btn">Login as Visitor</button>
+          <button class="btn staff__login--btn">Login as staff</button>
+        </div>
+      </section>
+
+      <section class="visitor__section">
+        <svg class="svgs form__svg">
+          <use xlink:href="svg/material-icon-sprite.svg#icon-person"></use>
+        </svg>
+        <h1 class="sub--heading visitor__heading">visitor</h1>
+        <button class="btn--close-modal" aria-label="">&times;</button>
+        <form action="" class="visitor__form" novalidate>
+          <label for="fullname">Visitor Fullname</label>
+          <input type="text" class="visitor-fullName" id="fullname" name="fullname" minlength="5" required />
+          <span class="error-visitor"></span>
+          <label for="number">Visitor Contact Number</label>
+          <input type="tel" class="input-phoneNumber" id="number" name="number" minlength="5" required />
+          <span class="error-visitor"></span>
+
+          <label for="visit">Purpose of Visit</label>
+          <textarea name="visit" class="textarea" id="visit" cols="10" rows="4" minlength="5" required></textarea>
+          <span class="error-visitor"></span>
+
+          <div class="visitor__special">
+            <p>did you have specific name of who to see?, if yes enter name</p>
+            <input type="text" />
+          </div>
+          <button class="btn btn__visitor">Submit &RightArrow;</button>
+        </form>
+      </section>
+      <section class="staff__section">
+        <svg class="svgs form__svg close--form">
+          <use xlink:href="svg/material-icon-sprite.svg#icon-work"></use>
+        </svg>
+        <h1 class="sub--heading staff__heading">staff</h1>
+        <button class="btn--close-modal" aria-label="">&times;</button>
+        <form action="" class="staff__form" novalidate>
+          <label for="fullname" class="name--label">Fullname</label>
+          <input type="text" class="staff-fullname" required minlength="5" id="fullname" name="fullname" />
+          <span class="error-staff" aria-live="polite"></span>
+          <label for="staffID" class="staffID--label">Staff ID</label>
+          <input type="text" class="staffIDInput" id="staffID" name="staffID" minlength="5" required />
+          <span class="error-staff" aria-live="polite"></span>
+
+          <label for="department" class="staffDepartment--label">Department</label>
+          <input type="text" class="staffDepartmentInput" id="department" name="department" minlength="6" required />
+          <span class="error-staff" aria-live="polite"></span>
+
+          <button class="btn btn__staff">Sign In &RightArrow;</button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__content">
+        <p>&copy; all right reserved 2022 | Build by Samson Dada 🧔🏿</p>
       </div>
-    </div>
-
-    <!--   login modal -->
-
-    <div id="login-modal-page">
-      <div id="login-modal--content">
-        <div id="login-modal-content--header">
-          <h3 class="login-header--text">Welcome To BlueHub</h3>
-          <span class="login-header--text"
-            >Lorem ipsum dolor sit, amet consectetur adipisicing
-          </span>
-        </div>
-
-        <!-- VISITOR MODAL -->
-        <div id="visitor-modal--login">
-          <form action="">
-            <label for="" class="visitor-label">Enter Your Full name</label>
-            <div class="form-holder">
-              <span class="icon-holder">
-                <span class="fa fa-user"></span>
-              </span>
-              <input
-                type="text"
-                class="input-content visitor-input"
-                placeholder="Full Name"
-                required=" required  autofocus"
-              />
-            </div>
-            <label for="" class="visitor-label"
-              >Choose Or Select Who To See</label
-            >
-            <div class="form-holder">
-              <span class="icon-holder">
-                <span class="fa fa-lock"></span>
-              </span>
-              <input
-                list="visitors"
-                id="visitor-opt"
-                type="text"
-                class="input-content visitor-input"
-                placeholder="Select or Input "
-                required="required"
-              />
-              <datalist id="visitors">
-                <option value="Human Resources"></option>
-                <option value="Account Officer"></option>
-                <option value="Marketing Manager"></option>
-                <option value="Chief Security Officer"></option>
-                <option value="Operational Manager"></option>
-              </datalist>
-            </div>
-            <button type="submit" id="visitBtn">Sign In</button>
-          </form>
-        </div>
-        <!-- STAFF MODAL LOGIN-->
-        <div id="staff-modal--login" class="">
-          <form action="">
-            <label for="">Enter Your Name</label>
-            <div class="form-holder">
-              <span class="icon-holder">
-                <span class="fa fa-user"></span>
-              </span>
-              <input
-                type="text"
-                class="input-content"
-                id="staff-name"
-                placeholder="Full Name"
-                required="required"
-              />
-            </div>
-            <label for="">Enter Your Staff ID</label>
-            <div class="form-holder">
-              <span class="icon-holder">
-                <span class="fa fa-lock"></span>
-              </span>
-              <input
-                id="staff-id"
-                type="text"
-                class="input-content"
-                placeholder="Staff ID"
-                required="required"
-              />
-            </div>
-
-            <button type="submit" id="loginBtn">Sign In</button>
-          </form>
-        </div>
-      </div>
-    </div>
-    <!--  -->
-    <div id="staff-signed-modal">
-      <div id="staff-signed-modal--header">
-        <h3><i>Blue</i>HUB</h3>
-        <span class="fa-2x" id="close-icon">&times;</span>
-      </div>
-      <p id="staff-greet-modal--text">
-        <!-- Dear Staffname Good Moring and Welcome To Bluehub -->
-      </p>
-    </div>
-    <div id="staff-profile">
-      <div id="account-body">
-        <div id="account-details">
-          <div id="account-user-image">
-            <img src="./images/user-one.png" alt="" />
-          </div>
-          <span id="account-user-header">
-            <h3 class="detail-items">Welcome Samson Dada</h3>
-          </span>
-          <div class="account-details--items">
-            <label for="">Staff ID:</label>
-            <span class="items">2333Ed</span>
-          </div>
-          <div class="account-details--items">
-            <label>Department:</label>
-            <span class="items">Information Science Technonolgy </span>
-          </div>
-          <div class="account-details--items">
-            <label for="">Dapartment Role:</label>
-            <span class="items">Front end Developer</span>
-          </div>
-        </div>
-        <div id="account-footer"></div>
-      </div>
-    </div>
+    </footer>
+    <script src="app.js"></script>
   </body>
 </html>
