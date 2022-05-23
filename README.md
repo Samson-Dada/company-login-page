@@ -1,17 +1,34 @@
-<!--  COLORS -->
 
-Twitter brand color pallete
+> # Plaform login page project
 
-#14171a, #657786, #aab8c2, #e1e8ed,
+## Company Login Platform 😁
 
-#f5f8fa
+This platform impliment sign in method for users.
 
-<!-- FONTS -->
+> A simple front end development
 
-Google font
-Nunito
+> Staff Login
 
-<!-- IMAGE -->
+> Visitor Login
 
-sky scrapper
-Free images from Unsplash site
+---
+
+- Forms
+- validation
+- Date Object
+- DOMs
+
+---
+
+- `HTML`
+
+- `CSS`
+
+- `Javascript`
+
+- `SVG for Icons`
+
+---
+
+- Desktop Version Only 💻
+
